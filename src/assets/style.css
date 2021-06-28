@@ -1,0 +1,146 @@
+:root {
+  --primary: #004d40;
+  --primary-light: #39796b;
+  --primary-dark: #00251a;
+  --white: #fff;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+nav,
+.content {
+  margin: 0 8rem;
+  position: relative;
+}
+.content {
+  padding: 2rem 0;
+}
+
+nav {
+  display: flex;
+  border-bottom: 0.2px solid var(--primary-light);
+  height: 3.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+}
+
+.logo {
+  font-size: 30px;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+ul li {
+  padding: 0.5rem 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+  margin-left: 0.5rem;
+  background-color: var(--primary);
+  display: flex;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+ul li span {
+  margin: 0 0.5rem;
+}
+ul li:hover {
+  background-color: var(--primary-light);
+}
+
+.color-p {
+  color: var(--primary);
+}
+
+.content table {
+  margin-top: 1rem;
+  width: 100%;
+}
+.content .head,
+.content .items {
+  display: grid;
+  grid-template-columns: 3rem 3rem 2fr 1fr 1fr;
+  padding: 0 0.3rem;
+  gap: 0.5rem;
+  width: 100%;
+}
+.content .head {
+  margin-top: 1rem;
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: 0.2px solid var(--primary-light);
+}
+.content .items {
+  padding: 0.5rem 0.3rem;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  position: relative;
+}
+.content .items:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.content .items .context-menu {
+  display: flex;
+  background: red;
+  width: 100%;
+}
+.content .items .context-menu ul li {
+  font-size: 12px;
+  padding: 0.3rem;
+}
+
+.content .loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 1rem;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+}
+.content .loader::before {
+  content: "... ";
+}
+
+.link-icon {
+  position: relative;
+}
+
+.not-imple {
+  position: absolute;
+  bottom: -2.2rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 2px 3px 2px 3px rgba(0, 0, 0, 0.1);
+  background: rgba(155, 12, 12, 0.5);
+}
